@@ -1,6 +1,6 @@
-# MetaDEx Contract!
+# MetaDEx Contract
 
-[Architecture](https://user-images.githubusercontent.com/35088567/149532852-f5fc64a8-9eb2-410c-8cbd-f45e56c9ee96.png)
+![Architecture](https://user-images.githubusercontent.com/35088567/149532852-f5fc64a8-9eb2-410c-8cbd-f45e56c9ee96.png)
 
 - When user open the Dex web page,the page will call "AMM Exchange Rate Collector" contract's view method without gas and sign. The frontend will get exchange rate of AMMs therefore.Then,the web page will calculate the best routine within browser by webassembly code. Once the front page get the proper routine, the web page will call "AMM Routine Worker" contract and implement the refined routine.The "AMM Routine Worker" contract will call "AMM adapter",the lib contract,and complete exchange eventually.
 
